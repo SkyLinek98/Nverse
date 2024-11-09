@@ -154,8 +154,10 @@ h1 {
     margin: 20px auto; /* Center each box */
     width: 80%; /* Optional: adjust width as needed */
     box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Center content vertically */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+    text-align: left; /* Align text to the left */
 }
 
 .category-box:hover {
@@ -167,5 +169,12 @@ h1 {
 .category-icon {
     width: 64px;
     height: 64px;
-    margin-top: 10px;
+    margin-right: 15px; /* Spacing between icon and text */
 }
+
+/* Styling for the text content in category box */
+.category-content {
+    display: flex;
+    flex-direction: column;
+}
+
