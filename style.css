@@ -19,7 +19,7 @@ body {
     position: relative;
 }
 
-/* Sparse and randomized stars effect */
+/* Sparse star effect */
 body::before {
     content: "";
     position: absolute;
@@ -29,28 +29,28 @@ body::before {
     height: 100%;
     background: transparent;
     background-image: 
-        radial-gradient(white, transparent 70%), /* Larger, dim stars */
-        radial-gradient(white, transparent 50%), /* Medium stars */
-        radial-gradient(white, transparent 20%); /* Tiny stars */
-    background-size: 6px 6px, 3px 3px, 1px 1px; /* Adjusted sizes for rarity */
+        radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 60%), /* Large, faint star */
+        radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent 70%), /* Medium star */
+        radial-gradient(circle, rgba(255, 255, 255, 0.9), transparent 80%); /* Small star */
+    background-size: 3px 3px, 2px 2px, 1px 1px;
     background-position: 
-        5% 15%,  /* Random positions to avoid uniform placement */
-        45% 65%, 
-        85% 35%, 
-        15% 85%, 
-        75% 50%; /* Scattered across the page */
-    animation: twinkle 6s infinite alternate ease-in-out; /* Slower, more subtle */
-    opacity: 0.6;
+        10% 20%, 
+        30% 70%, 
+        80% 30%, 
+        90% 90%, 
+        60% 40%; /* Very limited and scattered */
+    animation: twinkle 8s infinite alternate ease-in-out; /* Slower, varied timing */
+    opacity: 0.5;
     z-index: -1;
 }
 
-/* Randomized twinkling effect */
+/* Randomized, slow twinkling effect */
 @keyframes twinkle {
     0%, 100% {
-        opacity: 0.3;
+        opacity: 0.2;
     }
     50% {
-        opacity: 0.8;
+        opacity: 0.7;
     }
     70% {
         opacity: 0.4;
