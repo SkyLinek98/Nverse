@@ -9,7 +9,6 @@
 
 body {
     background-color: #000; /* Full black background */
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
