@@ -143,3 +143,28 @@ h1 {
     box-shadow: 0 0 8px rgba(0, 204, 255, 0.7);
     margin: 30px auto;
 }
+
+
+/* Category box styling */
+.category-box {
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent dark background */
+    border: 1px solid #00ccff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00ccff;
+}
+
+/* Icon styling inside each category box */
+.category-icon {
+    width: 64px;
+    height: 64px;
+    margin-top: 10px;
+}
