@@ -116,36 +116,41 @@ body {
     background: rgba(20, 20, 30, 1);
 }
 
-/* Icon styling */
+/* Icon Styling - Twice the size */
 .category-icon {
-    width: 50px;
-    margin-bottom: 10px;
+    width: 100px; /* Twice as large as before */
+    height: 100px; /* Ensures square aspect ratio */
+    margin-bottom: 15px;
 }
 
-/* Title Styling */
+/* Title Styling with Extra Space */
 .category-box h3 {
     font-size: 1.2rem;
-    margin: 5px 0;
+    margin: 8px 0 5px 0; /* Adds space between title and description */
     white-space: nowrap; /* Prevents title from wrapping */
     overflow: hidden; /* Keeps title within box */
     text-overflow: ellipsis;
 }
 
-/* Description Styling */
+/* Description Styling for Multi-Line */
 .category-box p {
     font-size: 0.9rem;
     color: #b3b3b3;
     margin-bottom: 10px;
     overflow: hidden;
-    max-height: 3em; /* Limit description height */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits to 3 lines */
+    -webkit-box-orient: vertical;
+    line-height: 1.2em; /* Line spacing for readability */
     text-overflow: ellipsis;
 }
 
-/* Get Started Button Section */
+/* Get Started Button Section - Full Width */
 .get-started {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    width: 100%; /* Full width of the box */
     padding: 10px 0;
     background: rgba(0, 0, 0, 0.7);
     border-top: 1px solid #00ccff;
@@ -158,6 +163,7 @@ body {
     border: none;
     font-weight: bold;
     cursor: pointer;
+    width: 100%; /* Full width */
     padding: 5px 0;
 }
 
