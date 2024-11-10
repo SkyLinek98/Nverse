@@ -1,4 +1,4 @@
-/* Reset and basic styling */
+/* General reset and styling */
 * {
     margin: 0;
     padding: 0;
@@ -11,170 +11,147 @@ body {
     background-color: #000; /* Full black background */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    text-align: center;
-    position: relative;
 }
 
-
-/* Logo Styling */
-.logo {
-    width: 150px;
-    margin: 20px auto;
-}
-
-/* Header Styling */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h1 {
-    font-size: 3rem;
-    color: #00ccff;
-    text-shadow: 2px 2px 8px rgba(0, 204, 255, 0.8);
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #b3b3b3;
-    margin-top: 10px;
-}
-
-/* Main Container Styling */
-.container {
+/* Top Section Styling */
+.top-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
-}
-
-/* Card Styles */
-.card {
-    background: rgba(50, 50, 60, 0.8);
-    border: 1px solid #444;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px;
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    color: #00ccff;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #cccccc;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.card a {
-    color: #00ccff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.card a:hover {
-    color: #00ffaa;
-}
-
-/* Glowing button styles */
-.button-container {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
     justify-content: center;
-}
-
-.glow-button {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 12px 24px;
-    color: #ffffff;
-    background: rgba(0, 204, 255, 0.2);
-    border: 1px solid #00ccff;
-    border-radius: 30px;
-    text-shadow: 0 0 10px rgba(0, 204, 255, 0.7);
-    cursor: pointer;
-    outline: none;
-    transition: 0.3s ease-in-out;
+    height: 60vh;
     position: relative;
-    overflow: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #00ccff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    position: absolute;
+    top: 20px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Glowing buttons */
+.glow-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0, 204, 255, 0.3);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 8px rgba(0, 204, 255, 0.5);
 }
 
 .glow-button:hover {
-    background: rgba(0, 204, 255, 0.5);
-    box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff;
+    background: rgba(0, 204, 255, 0.7);
 }
 
-.glow-button .icon {
-    margin-right: 8px;
+/* Welcome Content */
+.welcome-content h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #00ccff;
+}
+
+.description {
+    margin-top: 10px;
     font-size: 1.2rem;
+    color: #b3b3b3;
+    text-align: center;
+    max-width: 80%;
 }
 
-/* Glowing divider line */
-.divider {
-    width: 80%;
-    height: 2px;
-    background: rgba(0, 204, 255, 0.2);
-    box-shadow: 0 0 8px rgba(0, 204, 255, 0.7);
-    margin: 30px auto;
+/* Bottom Section Styling */
+.bottom-section {
+    height: 40vh;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
 }
 
+/* Category List Styling */
+.category-list {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
 
-/* Category box styling */
 .category-box {
-    background: rgba(0, 0, 0, 0.6); /* Slightly transparent dark background */
+    display: inline-block;
+    background: rgba(20, 20, 30, 0.8);
     border: 1px solid #00ccff;
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto; /* Center each box */
-    width: 80%; /* Optional: adjust width as needed */
-    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
-    display: flex; /* Flexbox for horizontal layout */
-    align-items: center; /* Center content vertically */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left; /* Align text to the left */
+    padding: 15px;
+    width: 200px;
+    height: 90%; /* Occupies most of the bottom section's height */
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 204, 255, 0.3);
+    transition: background 0.3s ease;
+    position: relative;
 }
 
 .category-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px #00ccff;
+    background: rgba(20, 20, 30, 1);
 }
 
-/* Icon styling inside each category box */
 .category-icon {
-    width: 64px;
-    height: 64px;
-    margin-right: 15px; /* Spacing between icon and text */
+    width: 50px;
+    margin-bottom: 10px;
 }
 
-/* Styling for the text content in category box */
-.category-content {
-    display: flex;
-    flex-direction: column;
+.category-box h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
 }
 
+.category-box p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+    overflow: hidden;
+    max-height: 3em; /* Limit description height */
+    text-overflow: ellipsis;
+}
+
+/* Get Started Button Section */
+.get-started {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 5px 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #00ccff;
+    text-align: center;
+}
+
+.get-started-button {
+    background: none;
+    color: #00ccff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.category-box:hover .get-started-button {
+    color: #00ffaa;
+}
