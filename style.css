@@ -79,12 +79,12 @@ body {
 .bottom-section {
     height: 40vh;
     overflow-x: auto;
-    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     background: rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
 }
 
 /* Category List Styling */
@@ -94,6 +94,7 @@ body {
     padding: 10px;
 }
 
+/* Category Box Styling */
 .category-box {
     display: inline-block;
     background: rgba(20, 20, 30, 0.8);
@@ -101,28 +102,35 @@ body {
     border-radius: 10px;
     padding: 15px;
     width: 200px;
-    height: 90%; /* Occupies most of the bottom section's height */
+    height: 100%; /* Full height of the bottom section */
     text-align: center;
     color: #ffffff;
     box-shadow: 0 0 8px rgba(0, 204, 255, 0.3);
     transition: background 0.3s ease;
     position: relative;
+    overflow: hidden; /* Ensures text stays within box boundaries */
 }
 
 .category-box:hover {
     background: rgba(20, 20, 30, 1);
 }
 
+/* Icon styling */
 .category-icon {
     width: 50px;
     margin-bottom: 10px;
 }
 
+/* Title Styling */
 .category-box h3 {
     font-size: 1.2rem;
     margin: 5px 0;
+    white-space: nowrap; /* Prevents title from wrapping */
+    overflow: hidden; /* Keeps title within box */
+    text-overflow: ellipsis;
 }
 
+/* Description Styling */
 .category-box p {
     font-size: 0.9rem;
     color: #b3b3b3;
@@ -135,9 +143,9 @@ body {
 /* Get Started Button Section */
 .get-started {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     width: 100%;
-    padding: 5px 0;
+    padding: 10px 0;
     background: rgba(0, 0, 0, 0.7);
     border-top: 1px solid #00ccff;
     text-align: center;
