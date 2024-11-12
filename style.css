@@ -62,6 +62,19 @@ body {
 }
 
 /* Welcome Content */
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    position: absolute; /* Ensures it centers within the entire section */
+    top: 50%; /* Centers vertically within the top section */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for perfect center alignment */
+}
+
 .welcome-content h1 {
     font-size: 3rem;
     text-shadow: 0 0 10px #00ccff;
